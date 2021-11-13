@@ -13,9 +13,9 @@ public class Usuario {
     
     public Usuario(String nombre, String user, String password, int edad) throws Exception{
         this.nombre = nombre;
-        setUser(user);
+        this.user = user;
         this.password = password;
-        this.edad = edad;
+        setEdad(edad);
     }
 
     public String getNombre() {
@@ -48,7 +48,7 @@ public class Usuario {
 
     public void setEdad(int edad) throws Exception {
         if(edad < 18){
-            throw new Exception("El usuario debe tener al meno 18 años");
+            throw new Exception("El usuario debe tener al menos 18 años");
         }
     }
 

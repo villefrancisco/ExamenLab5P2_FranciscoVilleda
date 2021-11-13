@@ -5,19 +5,29 @@ import java.util.*;
 public class Comprador extends Usuario{
     private int dinero;
     private int cuenta;
+    private int saldo;
     private String personaje;
     ArrayList<Juego> juegos = new ArrayList();
 
     public Comprador() {
     }
 
-    
-    public Comprador(int dinero, int cuenta, String personaje, String nombre, String user, String password, int edad) throws Exception {
+    public Comprador(int dinero, int cuenta, int saldo, String personaje, String nombre, String user, String password, int edad) throws Exception {
         super(nombre, user, password, edad);
         this.dinero = dinero;
         this.cuenta = cuenta;
+        this.saldo = saldo;
         this.personaje = personaje;
     }
+
+    public int getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(int saldo) {
+        this.saldo = saldo;
+    }
+
 
     public int getDinero() {
         return dinero;
